@@ -25,7 +25,7 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: top;
+  place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -54,28 +54,10 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-.msg-text {
-  background-color: #535bf2d2;
-  position: absolute;
-  box-sizing: border-box;
-  border-radius: 2em 2em;
-  width: 700px;
-  border: 2px solid #242424;
-}
-
-scscs  background-color: white;
-  left: -50px;
-  position: relative;
-  width: fit-content;
-  padding: 0px 10px 0px 10px;
-
-  transform: rotate(-20deg);
-}
-
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    background-color: #2dc969;
+    background-color: #ffffff;
   }
   a:hover {
     color: #747bff;

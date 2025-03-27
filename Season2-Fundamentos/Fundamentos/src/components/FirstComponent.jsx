@@ -1,5 +1,7 @@
 // Arquivos de estilo
 
+import MyComponents from "./myComponent";
+
 const FirstComponent = () => {
 
     // A função faz isso, cria um texto.
@@ -9,6 +11,8 @@ const FirstComponent = () => {
 
         <div>
             <h1>My first component</h1>
+            <MyComponents />
+
         </div>
     );
 };
@@ -53,6 +57,8 @@ const ThirdComponent = () => {
             <label htmlFor="message">Message:</label>
             <textarea id="message" name="message"></textarea>
             <button type="submit">Submit</button>
+            <MyComponents />
+
         </form>
     )
 }

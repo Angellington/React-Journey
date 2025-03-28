@@ -58,7 +58,6 @@ const ThirdComponent = () => {
             <textarea id="message" name="message"></textarea>
             <button type="submit">Submit</button>
             <MyComponents />
-
         </form>
     )
 }

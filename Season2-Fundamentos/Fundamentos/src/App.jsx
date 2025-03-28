@@ -5,6 +5,7 @@ import FirstComponent from './components/FirstComponent'
 import { SecondComponent } from './components/FirstComponent'
 import { ThirdComponent } from './components/FirstComponent'
 import TemplateExpressions from './components/TemplateExpressions'
+import Events from './components/Events'
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
         <SecondComponent />
         <ThirdComponent />
         <TemplateExpressions />
+        <Events />
       </div>
     </>
   )

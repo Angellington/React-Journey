@@ -4,6 +4,7 @@ const Events = () => {
         alert("Cliqued!!!")
     }
 
+    /* Funções renderizando HTML*/
     const renderSomething = (x) => {
         if(x){
             return <h1>Renderizando alog</h1>
@@ -31,6 +32,7 @@ const Events = () => {
 
             <button onClick={() => console.log("Estamos adentro!")}>Clique aqui</button>
         </div>
+        {/* Retornos */}
         {renderSomething(true)}
         {renderSomething(false)}
         {renderAnotherOne(false)}

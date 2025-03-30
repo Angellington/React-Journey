@@ -4,7 +4,7 @@ import './App.css'
 import Contador from './components/contador'
 import Visitante from './components/visitante'
 import Luz from './components/luz'
-
+import ListaObjeto from './components/ListaObjeto'
 function App() {
   return (
     <>
@@ -14,6 +14,9 @@ function App() {
         <Contador />
         <Visitante />
         <Luz />
+      </div>
+      <div>
+        <ListaObjeto />
       </div>
     </>
   )

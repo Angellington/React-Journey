@@ -20,6 +20,7 @@ const Visitante = () => {
 
         <form onSubmit={handleSubmit}>
             <input type="text" name="nome" id="nome" required onChange={(e) => setInputName(e.target.value)}/>
+            
             <input type="submit" value="Alterar" />
         </form>
     </article>

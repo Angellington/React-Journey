@@ -24,7 +24,7 @@ const ListaObjeto = () => {
 
         setPessoas([...pessoas, novoUsuario])
 
-        setNovoUsuario({ nome: '', idade: '', mensagem: ''});
+        setNovoUsuario({ nomeefef '', idade: '', mensagem: ''});
 
         e.target.reset();
     } 

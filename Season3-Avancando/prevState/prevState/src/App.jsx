@@ -10,6 +10,10 @@ import ButtonProp from './components/ButtonProp'
 import Usuarios from './components/Usuarios'
 import CarDetails from './components/CarDetails'
 import Fragments from './components/Fragments'
+import Container from './components/Container'
+import ExecuteFunction from './components/ExecuteFunction'
+import Message from './components/Message'
+import ChangeMessageState from './components/ChangeMessageState'
 
 const App = () => {
   const [count, setCount] = useState(0)
@@ -28,6 +32,16 @@ const App = () => {
     {id: 3, brand: 'Chevrolet', model: 'Onix', year: 2024, color: 'White', plate: 'VE3GSD', price: 223.233, newCar: true},
     {id: 4, brand: 'Volkswagen', model: 'Gol', year: 2025, color: 'Black', plate: 'VE3GSF', price: 203.233}
   ]
+
+  const showMessage = () => {
+    console.log('Evento do componente pai')
+  }
+
+  const [message, setMessage] = useState('')
+  
+  const handleMessage = (msg) => {
+    setMessage(msg);
+  }
 
   return (
     <>
@@ -67,11 +81,23 @@ const App = () => {
         />
       ))}
 
-
+    
 
 
       {/* Fragments */}
       <Fragments propFragment={'Herói'} />
+
+      {/* Children */}
+      <Container>
+        <p>Este é o conteudo</p>
+      </Container>
+
+      {/* Executar função */}
+      <ExecuteFunction myFunction={showMessage} />
+
+      {/* State Lift */}
+      <Message msg={message} />
+      <ChangeMessageState handleMessage={handleMessage} />
     </>
   )
 }

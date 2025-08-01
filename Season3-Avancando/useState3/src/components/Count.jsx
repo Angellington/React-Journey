@@ -7,7 +7,7 @@ export default function Count(){
             <p>Um contador simples: </p>
             <p>{count}</p>
             <button 
-                onClick={() => setCount(count + 1)}
+                onClick={() => setCount(prev => prev + 1)}
                 >Acrescentar</button>
             
             <button

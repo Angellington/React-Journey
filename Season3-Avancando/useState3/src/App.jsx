@@ -1,6 +1,7 @@
 import './App.css'
 import AnotherList from './components/AnotherList'
 import Count from './components/Count'
+import Lista from './components/Lista'
 import ListRender from './components/ListRender'
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
         <ListRender />
         <AnotherList />
       </div>
-      
+      <Lista />
     </>
   )
 }

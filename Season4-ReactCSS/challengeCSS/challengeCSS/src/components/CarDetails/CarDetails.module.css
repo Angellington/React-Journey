@@ -1,0 +1,111 @@
+:root {
+    --accent: #ff6b6b;
+    --text: #f0f8ff;
+    --muted: #c3cfe0;
+    --radius: 1.25rem;
+    --shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    font-family: 'Inter', system-ui,-apple-system,BlinkMacSystemFont,sans-serif;
+  }
+  
+  .carsGrid {
+    display: grid;
+    gap: 1.5rem;
+    padding: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+  
+  .carCard {
+    position: relative;
+    background: linear-gradient(135deg,#1f2a45 0%,#2f3b6f 60%);
+    border-radius: var(--radius);
+    padding: 1.5rem 1.25rem 2rem;
+    color: var(--text);
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform .35s cubic-bezier(.25,.8,.25,1), filter .35s;
+    cursor: pointer;
+  }
+  
+  .carCard:hover {
+    transform: translateY(-6px);
+    filter: brightness(1.05);
+  }
+  
+  .carHeader {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .badge {
+    background: rgba(255,255,255,0.08);
+    padding: .35rem .75rem;
+    border-radius: 999px;
+    font-size: .55rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    backdrop-filter: blur(6px);
+  }
+  
+  .model {
+    margin: .5rem 0 .25rem;
+    font-size: 1.5rem;
+    line-height: 1.1;
+  }
+  
+  .meta {
+    font-size: .9rem;
+    color: var(--muted);
+    margin-bottom: 1rem;
+  }
+  
+  .actions {
+    margin-top: auto;
+    display: flex;
+    gap: .5rem;
+  }
+  
+  .btn {
+    background: var(--accent);
+    border: none;
+    padding: .65rem 1rem;
+    border-radius: 999px;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all .35s cubic-bezier(.25,.8,.25,1);
+  }
+  
+  .btn::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0.15);
+    mix-blend-mode: overlay;
+    opacity: 0;
+    transition: opacity .35s;
+    border-radius: 999px;
+  }
+  
+  .btn:hover {
+    transform: scale(1.03);
+  }
+  
+  .btn:hover::after {
+    opacity: 1;
+  }
+  
+  .empty {
+    padding: 2rem;
+    text-align: center;
+    background: #1f2a45;
+    color: var(--muted);
+    border-radius: 1rem;
+    font-size: 1rem;
+  }
+  

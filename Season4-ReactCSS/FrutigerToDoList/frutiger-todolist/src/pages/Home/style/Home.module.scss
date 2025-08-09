@@ -1,10 +1,22 @@
 .actions {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    min-height: 100vh;
 }
 
 .cards {
     width: 100%;
-    height: 60vh;
-    background-color: #232d23;
+    min-height: 60vh;
+    display: flex;
+    flex-wrap: wrap;      
+    flex-direction: row;  
+    gap: 1rem;           
+    padding: 1rem;
+}
+
+@media (max-width: 768px) {
+    .cards {
+        flex-direction: column; 
+        flex-wrap: nowrap;      
+        min-height: auto;       
+    }
 }

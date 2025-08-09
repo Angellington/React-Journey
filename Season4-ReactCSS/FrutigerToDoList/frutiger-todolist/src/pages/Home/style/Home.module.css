@@ -1,3 +1,12 @@
+.actions {
+  width: 100vw;
+  height: 100vh;
+}
 
+.cards {
+  width: 100%;
+  height: 60vh;
+  background-color: #232d23;
+}
 
 /*# sourceMappingURL=Home.module.css.map */

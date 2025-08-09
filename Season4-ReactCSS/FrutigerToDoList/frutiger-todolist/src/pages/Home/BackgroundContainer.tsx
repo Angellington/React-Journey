@@ -8,6 +8,7 @@ const BackgroundContainer = styled(Box)(({ theme }) => ({
   display: 'flex',
   flexDirection: 'column',
   padding: theme.spacing(0),
+  zIndex: 0,
   '&:before': {
     content: '""',
     position: 'absolute',
@@ -16,8 +17,8 @@ const BackgroundContainer = styled(Box)(({ theme }) => ({
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
-    filter: 'brightness(0.65)',
-    zIndex: 0,
+    filter: 'brightness(0.90)',
+    zIndex: -1,
   },
   '& > .content': {
     position: 'relative',

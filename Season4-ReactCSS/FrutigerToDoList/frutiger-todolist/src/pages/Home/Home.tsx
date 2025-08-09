@@ -3,17 +3,18 @@ import React from 'react'
 import ActionsLayer from './components/ActionsLayer/ActionsLayer'
 import BackgroundContainer from './BackgroundContainer'
 
+import styles from './style/Home.module.css'
+import DataCard from './components/DataCard/DataCard'
+
 const Home = () => {
   return (
     <BackgroundContainer>
-    <Box sx={{
-        bgcolor: 'accent.main',
-        color:' text.primary',
-        p: 4,
-        height: '100vh'
-    }}>
+      <Box className={styles.action}>
         <ActionsLayer />
-    </Box>
+      </Box>
+      <Box className={styles.cards}>
+        <DataCard />
+      </Box>
     </BackgroundContainer>    
    
   )

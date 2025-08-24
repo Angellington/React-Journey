@@ -3,7 +3,11 @@ const TextOnScreen = () => {
 
     useEffect(() => {
         console.log("TextOnScreen component mounted");
-    })
+
+        return () => {
+          console.log("TextOnScreen component unmounted");
+        }
+    }, [])
 
   return (
     <div>TextOnScreen</div>

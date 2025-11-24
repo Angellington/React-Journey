@@ -19,7 +19,7 @@ const GameScreen = ({
     verifyLetter(letter)
     setLetter("")
 
-    letterInputRef.current.focus();
+    letterInputRef.current.focus()
   }
 
   return (

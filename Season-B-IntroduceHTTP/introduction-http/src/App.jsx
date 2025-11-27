@@ -40,7 +40,15 @@ function App() {
       },
       body: JSON.stringify(product)
     });
+
     
+    // Aula 3 - Carregamento Dinâmico;
+    const addedProduct = await res.json();
+
+    setProducts((prevProducts) => [...prevProducts, addedProduct])
+
+    setName("");
+    setPrice("");
   }
   
   

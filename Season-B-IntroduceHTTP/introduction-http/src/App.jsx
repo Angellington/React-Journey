@@ -32,7 +32,7 @@
     // Aula 2 - Adição de produtos;
     const handleDelete = (id) => {
       try{
-        httpConfig(null, "DELETE", id)
+        httpConfig(id, "DELETE")
         alert("Deletado com sucesso!")
       } catch(e){
         console.error("e", e)

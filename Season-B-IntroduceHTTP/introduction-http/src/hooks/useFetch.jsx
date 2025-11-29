@@ -18,7 +18,7 @@ export const useFetch = (url) => {
   // 7 - Error
   const [error, setError] = useState(null);
 
-  function httpConfig(data, method, id){
+  function httpConfig(data, method){
     if(method === "POST"){
       setConfig({
         method,
@@ -32,6 +32,8 @@ export const useFetch = (url) => {
     }
 
     if(method === "DELETE"){
+      console.log('data', data)
+      setId(data.id)
       setConfig({
         method,
         headers: {
@@ -77,7 +79,7 @@ export const useFetch = (url) => {
     }
 
     httpRequest();
-  }, [config, method, url, id])
+  }, [config, method, url])
 
   return { data, httpConfig, loading, error};
 };

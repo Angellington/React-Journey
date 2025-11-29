@@ -12,7 +12,7 @@ body {
   padding: 20px;
 }
 
-  /* .app {
+  .app {
     max-width: 1200px;
     margin: 0 auto;
     background: white;
@@ -92,6 +92,24 @@ body {
     max-width: 800px;
     margin: 0 auto;
   }
+  .product-button {
+  background: transparent;
+  color: #667eea;
+  border: 2px solid #667eea;
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.product-button:hover {
+  background: #667eea;
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(102, 126, 234, 0.2);
+}
 
   .add-product label {
     display: flex;
@@ -153,6 +171,7 @@ body {
     padding: 60px 20px;
     font-size: 1.1rem;
   }
+  
 
   @media (max-width: 768px) {
     body {
@@ -184,6 +203,7 @@ body {
       align-items: flex-start;
       gap: 5px;
     }
+
   }
 
   @media (max-width: 480px) {
@@ -228,7 +248,7 @@ body {
   .app > ul li:nth-child(2) { animation-delay: 0.2s; }
   .app > ul li:nth-child(3) { animation-delay: 0.3s; }
   .app > ul li:nth-child(4) { animation-delay: 0.4s; }
-  .app > ul li:nth-child(5) { animation-delay: 0.5s; } */
+  .app > ul li:nth-child(5) { animation-delay: 0.5s; }
 
   .add-product {
     border-top: 1px solid #000;

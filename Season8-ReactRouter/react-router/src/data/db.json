@@ -1,0 +1,19 @@
+{
+  "products": [
+    {
+      "id": "2",
+      "name": "Calça vermelha",
+      "price": 90
+    },
+    {
+      "id": "e371",
+      "name": "Isabela Alves Bitencourt Barbosa",
+      "price": "18"
+    },
+    {
+      "id": "82a5",
+      "name": "marcia",
+      "price": "33"
+    }
+    ]
+}

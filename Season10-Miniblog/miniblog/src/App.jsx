@@ -11,6 +11,8 @@ import { onAuthStateChanged } from 'firebase/auth';
 import { useState, useEffect } from 'react';
 import useAuth from './hooks/useAuth'
 import { useAuthValue } from './context/AuthContext.jsx'
+import CreatePost from './pages/CreatePost/CreatePost.jsx'
+import Dashboard from './pages/Dashboard/Dashboard.jsx'
 
 function App() {
   const {  loading , user} = useAuthValue();
@@ -35,6 +37,8 @@ function App() {
 
         <Route path='/login' element={<Login />}></Route>
         <Route path='/register' element={<Register />}></Route>
+        <Route path='/posts/create' element={<CreatePost />}></Route>
+        <Route path='/dashboard' element={<Dashboard />}></Route>
       </Routes>
     </div>
     <Footer />

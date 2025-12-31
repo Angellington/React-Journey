@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom'
+import { Navigate, Route, Routes } from 'react-router-dom'
 import './App.css'
 import Home from './pages/Home/Home'
 import About from './pages/About/About'
@@ -19,13 +19,9 @@ function App() {
 
   const loadingUser = user === undefined
 
-
-
   if(loadingUser){
     return <p>Carregando...</p>
   }
-
-
 
   return (
     <>
@@ -35,10 +31,11 @@ function App() {
         <Route path='/' element={<Home />}></Route>
         <Route path='/about' element={<About />}></Route>
 
-        <Route path='/login' element={<Login />}></Route>
-        <Route path='/register' element={<Register />}></Route>
-        <Route path='/posts/create' element={<CreatePost />}></Route>
-        <Route path='/dashboard' element={<Dashboard />}></Route>
+        <Route path='/login' element={!user ? <Login /> : <Navigate to="/"/>}></Route>
+        <Route path='/register' element={!user ? <Register /> : <Navigate to="/"/>}></Route>
+        <Route path='/posts/create' element={user ? <CreatePost /> : <Navigate to="/login"/>}></Route>
+        <Route path='/dashboard' element={user ? <Dashboard /> : <Navigate to="/login"/>}></Route>
+        
       </Routes>
     </div>
     <Footer />

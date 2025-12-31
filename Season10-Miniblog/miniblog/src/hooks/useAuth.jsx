@@ -1,4 +1,4 @@
-import { db } from "../firebase/config"; 
+import { db } from "../firebase/config";
 
 import {
   getAuth,
@@ -43,41 +43,68 @@ const useAuth = () => {
 
       return user;
     } catch (err) {
-        setLoading(true)
-        setError(null)
+      setLoading(true);
+      setError(null);
 
-        let systemErrorMessage;
+      let systemErrorMessage;
 
-        if(err.message.includes("Password")){
-            systemErrorMessage = "A senha preicsa conter pelo menos 6 caracteres";
-        } else if(err.message.includes("email-already")) {
-            systemErrorMessage = "E-mail já cadastrado"
-        } else {
-            systemErrorMessage = 'Ocorreu um erro. Por favor, tente mais tarde.'
-        }
-        setError(systemErrorMessage)
+      if (err.message.includes("Password")) {
+        systemErrorMessage = "A senha preicsa conter pelo menos 6 caracteres";
+      } else if (err.message.includes("email-already")) {
+        systemErrorMessage = "E-mail já cadastrado";
+      } else {
+        systemErrorMessage = "Ocorreu um erro. Por favor, tente mais tarde.";
+      }
+      setError(systemErrorMessage);
     } finally {
-        setLoading(false)
+      setLoading(false);
     }
   };
 
   //logout - sign out
   const logout = () => {
-    checkIfIsCancelled()
-    signOut(auth)
-  }
+    checkIfIsCancelled();
+    signOut(auth);
+  };
+
+  // login - sign in
+  const login = async (data) => {
+    await checkIfIsCancelled();
+    setLoading(true);
+    setError(true);
+
+    try {
+      await signInWithEmailAndPassword(auth, data.email, data.password);
+    } catch (err) {
+      let systemErrorMessage;
+
+      if (err.message.includes("user-not-found")) {
+        systemErrorMessage = "Usuário não encontrado.";
+      } else if (err.message.includes("wrong-password")) {
+        systemErrorMessage = "Senha errada";
+      } else if (err.message.includes("invalid")) {
+        systemErrorMessage = "Credenciais inválidas!";
+      } else{
+        systemErrorMessage = "Ocorreu um erro. Por favor, tente mais tarde.";
+      }
+      setError(systemErrorMessage);
+    } finally {
+      setLoading(false)
+    }
+  };
 
   useEffect(() => {
-    return () => setCancelled(true)
-  }, [])
+    return () => setCancelled(true);
+  }, []);
 
   return {
     auth,
     createUser,
     error,
     loading,
-    logout
-  }
+    logout,
+    login,
+  };
 };
 
 export default useAuth;

@@ -13,6 +13,7 @@ import useAuth from './hooks/useAuth'
 import { useAuthValue } from './context/AuthContext.jsx'
 import CreatePost from './pages/CreatePost/CreatePost.jsx'
 import Dashboard from './pages/Dashboard/Dashboard.jsx'
+import Search from './pages/Search/Search.jsx'
 
 function App() {
   const {  loading , user} = useAuthValue();
@@ -30,6 +31,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />}></Route>
         <Route path='/about' element={<About />}></Route>
+        <Route path='/search' element={<Search />}></Route>
 
         <Route path='/login' element={!user ? <Login /> : <Navigate to="/"/>}></Route>
         <Route path='/register' element={!user ? <Register /> : <Navigate to="/"/>}></Route>

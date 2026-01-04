@@ -14,6 +14,7 @@ import { useAuthValue } from './context/AuthContext.jsx'
 import CreatePost from './pages/CreatePost/CreatePost.jsx'
 import Dashboard from './pages/Dashboard/Dashboard.jsx'
 import Search from './pages/Search/Search.jsx'
+import Post from './pages/Post/Post.jsx'
 
 function App() {
   const {  loading , user} = useAuthValue();
@@ -32,6 +33,7 @@ function App() {
         <Route path='/' element={<Home />}></Route>
         <Route path='/about' element={<About />}></Route>
         <Route path='/search' element={<Search />}></Route>
+        <Route path='/post/:id' element={<Post />}></Route>
 
         <Route path='/login' element={!user ? <Login /> : <Navigate to="/"/>}></Route>
         <Route path='/register' element={!user ? <Register /> : <Navigate to="/"/>}></Route>

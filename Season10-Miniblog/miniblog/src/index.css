@@ -133,7 +133,7 @@ input, textarea {
   background-color: #000;
 }
 
-.btn.btn-danger:hover {
+.btn.btn-outline.danger:hover {
   background-color: #DC3545;
 }
 
